@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <h1>TODO list</h1>
     <h2>Items</h2>
     <div id="items"></div>
-    <input id="itemInput" type="text" placeholder="Add an Item"/>
-    <button onclick="addItem()">Click here</button>
+    
+    <input id="itemInput" type="text" placeholder="Add an item" />
+    <input id="dueDateInput" type="date" />
+    <button onclick="addItem()">Add</button>
+    
     <script src="script.js"></script>
 </body>
 </html>

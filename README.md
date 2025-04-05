@@ -1,21 +1,28 @@
 # To-Do List
 
-A simple to-do list application built with HTML and JavaScript.
+A simple to-do list application built with HTML, CSS, and JavaScript.
 
-The user should be able to:
-- Add new items to the list.
-- Delete existing items.
-- Persist the list using local storage, so it stays after page refresh.
+Users can:
+- Add new tasks with optional due dates
+- Mark tasks as completed
+- Delete tasks
+- Persist their to-do list using `localStorage`, even after refreshing
+
+![Badge](https://img.shields.io/badge/made%20with-💚%20vanilla%20JS-brightgreen)
+
+---
 
 ## Table of contents
 
 - [Overview](#overview)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+- [My Process](#my-process)
+  - [Built With](#built-with)
+  - [What I Learned](#what-i-learned)
 - [Author](#author)
+
+---
 
 ## Overview
 
@@ -26,29 +33,38 @@ The user should be able to:
   <img src="./media/screenshots/todo_interface.png" alt="To-Do List Interface" width="600"/>
 </details>
 
+---
+
 ### Links
 
-- [Solution URL:](https://github.com/Lasse-Rodal/To-Do-List)
-- [Live Site URL:](https://lasse-rodal.github.io/To-Do-List/)
+- [GitHub Repo](https://github.com/Lasse-Rodal/To-Do-List)
+- [Live Demo](https://lasse-rodal.github.io/To-Do-List/)
 
-## My process
+---
 
-### Built with
+## My Process
 
-- Semantic HTML5 markup
-- Vanilla JavaScript
+### Built With
+
+- Semantic **HTML5**
+- **Vanilla JavaScript**
   - DOM manipulation
   - Event listeners
-  - Array and localStorage handling
+  - Array methods
+  - `localStorage`
 
-### What I learned
+---
+
+### What I Learned
 
 In this project, I practiced:
 
-- Persisting data with `localStorage`.
-- Managing a list using arrays and index-based operations.
-- Creating elements and appending them to the DOM with JavaScript.
+- Dynamically rendering DOM elements
+- Managing and storing task data using arrays and `localStorage`
+- Handling user input, including checkboxes and date fields
+
+---
 
 ## Author
 
-- Github - [Lasse Rodal Pedersen](https://github.com/Lasse-Rodal)
+- GitHub – [Lasse Rodal Pedersen](https://github.com/Lasse-Rodal)
