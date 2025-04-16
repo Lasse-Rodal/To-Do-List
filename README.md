@@ -28,10 +28,9 @@ Users can:
 
 ### Screenshot
 
-<details>
-  <summary>Main To-Do List Interface</summary>
-  <img src="./media/screenshots/todo_interface.png" alt="To-Do List Interface" width="600"/>
-</details>
+Live demo of the To-Do List in action:
+
+<img src="./media/todo_demo.gif" alt="To-Do List Demo GIF" width="600"/>
 
 ---
 

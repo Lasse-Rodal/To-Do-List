@@ -1,7 +1,17 @@
     :root {
         --neon-green: #39FF14;
+        --neon-green-faded: #39ff1490;
+        --neon-pink: #ff003c;
         --dark-bg: #0d0d0d;
         --panel-bg: #121212;
+
+        --light-bg: #f3f3f3;
+        --light-text: #222222;
+        --light-input-bg: #ffffff;
+        --light-border: #999999;
+        --light-panel: #e9e9e9;
+        --light-completed: #aaaaaa;
+        --light-checkbox: #444444;
     }
 
     body {
@@ -88,13 +98,83 @@ h1, h2 {
     }
 
     #items button:hover {
-        background-color: #ff003c;
+        background-color: var(--neon-pink);
         color: white;
-        border-color: #ff003c;
-        box-shadow: 0 0 10px #ff003c;
+        border-color: var(--neon-pink);
+        box-shadow: 0 0 10px var(--neon-pink);
     }
 
     input[type="checkbox"] {
         transform: scale(1.2);
         accent-color: var(--neon-green);
     }
+
+    .completed {
+        text-decoration: line-through;
+        color: var(--neon-green-faded);
+        opacity: 0.6;
+        transition: all 0.3s ease-in-out;
+      }
+
+/*Dark/light mode*/
+
+#toggleTheme {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    color: var(--neon-green);
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#toggleTheme:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 12px var(--neon-green);
+}
+
+body.light-mode {
+    background: var(--light-bg);
+    color: var(--light-text);
+}
+
+body.light-mode h1, 
+body.light-mode h2 {
+    color: var(--light-text);
+    text-shadow: none;
+}
+
+body.light-mode input,
+body.light-mode button {
+    background-color: var(--light-input-bg);
+    color: var(--light-text);
+    border: 1px solid var(--light-border);
+}
+
+body.light-mode #items div {
+    background-color: var(--light-panel);
+    border-left: 4px solid var(--light-border);
+    box-shadow: none;
+}
+
+body.light-mode .completed {
+    color: var(--light-completed);
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+body.light-mode #items button:hover {
+    background-color: var(--neon-pink);
+    color: white;
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 8px var(--neon-pink);
+}
+
+body.light-mode input[type="checkbox"] {
+    accent-color: var(--light-checkbox);
+}

@@ -19,7 +19,11 @@ function renderItems() {
         const text = document.createElement("span");
         text.textContent = item.text + (item.dueDate ? ` (Due: ${item.dueDate})` : "");
         text.style.margin = "0 10px";
-        if (item.completed) text.style.textDecoration = "line-through";
+        if (item.completed) {
+            text.classList.add("completed");
+          } else {
+            text.classList.remove("completed");
+          }
 
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
@@ -68,3 +72,26 @@ function removeItem(idx) {
 }
 
 document.addEventListener("DOMContentLoaded", loadItems);
+
+// Light/dark mode
+
+const toggleBtn = document.getElementById("toggleTheme");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  const isLight = document.body.classList.contains("light-mode");
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+  toggleBtn.textContent = isLight ? "☀️" : "🌙";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+    toggleBtn.textContent = "☀️";
+  } else {
+    toggleBtn.textContent = "🌙";
+  }
+});
+
